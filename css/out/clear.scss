@@ -1,0 +1,14 @@
+//清除浮动
+@mixin clear($clear-name) {
+    #{$clear-name}:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+
+@mixin clear-a {
+        content: '';
+        display: block;
+        clear: both;
+}

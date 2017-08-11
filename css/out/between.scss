@@ -1,0 +1,25 @@
+//div 两端对其
+@mixin between {
+    font-size:0;
+    letter-spacing:-0.5em;
+    text-align:justify;
+    text-justify:distribute-all-lines; /* for ie */
+   
+    &:after {
+        content:"";
+        height:0;
+        width:100%;
+        display:inline-block;
+        overflow:hidden;
+    }
+    
+    > div {
+        display:inline-block;
+        vertical-align:top;
+        letter-spacing:normal;
+        *display:inline;
+        *zoom:1;
+        width:20%;
+        margin:13px 0;
+    }
+}

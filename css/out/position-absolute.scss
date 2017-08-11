@@ -1,0 +1,9 @@
+//定位
+@mixin position-a($position-t,$position-l,$position-r,$position-b) {
+    position: absolute;
+    top: $position-t;
+    left: $position-l;
+    right: $position-r;
+    bottom: $position-b;
+    z-index: 9998;
+}

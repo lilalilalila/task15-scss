@@ -1,0 +1,484 @@
+@import 'out/reset';
+@import 'out/clear';
+@import 'out/between';
+@import 'color/color';
+@import 'out/bg-image';
+
+@import 'carousel/carousel';
+@import 'header/header';
+@import 'footer/footer';
+@import 'out/li-between';
+
+
+    * {
+        font-size: 12px !important;
+    }
+
+body {
+    overflow-x: hidden;
+}
+
+.header {
+    .nav {
+        > div {
+            img {
+                width: 163px;
+                height: 32px;
+                vertical-align: middle;
+            }
+            
+            ul {
+                width: 296px;
+                
+                @media screen and (max-width: 600px) {
+                    & {
+                        width: 160px;
+                    }
+                }
+                
+                li {
+                    a {
+                        font-size: 1.4rem !important;
+                        line-height: 5.25rem !important;
+                        
+                        @media screen and (max-width: 600px) {
+                            & {
+                                font-size: 1rem !important;
+                                line-height: 1.5rem !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.main {
+    width: 100%;
+    max-width: 1920px;
+    overflow-x: hidden;
+    background-color: $bg-color;
+    margin-top: -6px;
+    
+    > div {
+        width: 70%;
+        margin: 5% auto;  
+        
+        @media screen and (max-width: 1200px) {
+            & {
+                width: 98%;
+            }
+        }
+        
+        @media screen and (max-width: 810px) {
+            & {
+                margin: 10% auto;
+            }
+        }
+    }
+    
+    .line1 {
+        @include between;
+        
+        > div {
+            display: inline-block;
+            width: 17.5%;
+            padding: 0 2%;
+            text-align: center;
+            height: 13rem;
+            margin: 0 1.491%;
+            vertical-align: middle;
+            
+            @media screen and (max-width: 810px) {
+                & {
+                    width: 100%;
+                    padding: 0;
+                    margin: 0;
+                }
+            }
+            
+            h4 {
+                margin: 15px 0;
+            }
+            
+            .guifan {
+                margin: 18px 0;
+            }
+            
+            p {
+                text-align: left;
+                font-size: 1rem;
+                color: $font;
+                margin-left: 3%;
+                
+                @media screen and (max-width: 810px) {
+                    & {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+        
+        .line1-border {
+            border-left: 2px dashed $border;
+            padding-top: 1%;
+            
+            @media screen and (max-width: 810px) {
+                & {
+                    width: 141px;
+                    margin-left: 37%;
+                    padding-left: 15px;
+                    
+                    p {
+                        text-align: left;
+                    }
+                }
+            }
+            
+            .number {
+                padding-left: 21px;
+                color: $green;
+                line-height: 1rem;
+                margin-top: 10.5%;
+                background-image: url('../img/技能树首页_25.png');
+                @include bg-img(
+                    $bg-s-x: 11px,
+                    $bg-s-y: 14px,
+                    $bg-p: left);
+                    
+                @media screen and (max-width: 810px) {
+                    & {
+                        margin-top: 21.5%;
+                    }
+                }
+            }
+        }
+    }
+    
+    .line2 {
+        h4 {
+            margin-bottom: 3%;
+            font-size: 1.2rem;
+            text-align: center;
+        }
+        
+        .hidden-img {
+            display: none;
+            
+            img {
+                width: 24px;
+                height: 22px;
+            }
+            
+            @media screen and (max-width: 810px) {
+                & {
+                    display: block;
+                    margin-left: 46.5%;
+                    padding-left: 0;
+                    width: 6%;
+                    height: 26px;
+                            
+                    -webkit-transform: rotate(90deg);
+                    -moz-transform: rotate(90deg);
+                    -ms-transform: rotate(90deg);
+                    transform: rotate(90deg);
+                }
+            }
+        }
+        
+        //整排
+        > div {
+            width: 100%;
+            margin-bottom: 20px;
+            @include between;
+            height: 7rem;
+            
+            @media screen and (max-width: 810px) {
+                & {
+                    height: 100%;
+                    width: 47%;
+                    padding-left: 7%;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+            
+            
+            .line2-img {
+                width: 6%;
+                text-align: center;
+                
+                @media screen and (max-width: 810px) {
+                    & {
+                        margin: 3% 36%;
+                    }
+                }
+                
+                img {
+                    width: 24px;
+                    height: 22px;
+                    vertical-align: middle;
+                
+                    @media screen and (max-width: 810px) {
+                        & {
+                            margin-left: 30%;
+                            
+                            -webkit-transform: rotate(90deg);
+                            -moz-transform: rotate(90deg);
+                            -ms-transform: rotate(90deg);
+                            transform: rotate(90deg);
+                        }
+                    }
+                }
+            }
+            
+            //文字与圆
+            > div {
+                width: 18%;
+                display: inline-block;
+                vertical-align: middle;
+                
+                @media screen and (max-width: 810px) {
+                    & {
+                        width: 100%;
+                    }
+                }
+                
+                .circular {
+                    display: inline-block;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 100%;
+                    box-shadow: 0 0 2px $circle;
+                    position: relative;
+                    background-color: $white;
+                    text-align: center;
+                    vertical-align: middle;
+                    
+                    span {
+                        position: absolute;
+                        font-size: 1rem;
+                        color: $green;
+                        vertical-align: middle;
+                        left: 41%;
+                        top: 27%;
+                    }
+                }
+                
+                p {
+                   display: inline-block;
+                   width: 66%;
+                   vertical-align: middle;
+                   margin-left: 2%;
+                   color: $font;
+                   
+                   @media screen and (max-width: 1200px) and (min-width: 810px) {
+                       & {
+                           width: 64%;
+                       }
+                   }
+                }
+            }
+        }
+    }
+    
+    .line3 {
+        position: relative;
+        
+        h4 {
+            margin-bottom: 3%;
+            font-size: 1.2rem;
+            text-align: center;
+        }
+        
+        ul {
+            width: 60px;
+            height: 10px;
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            margin-left: -25px;
+            
+            @media screen and (max-width: 810px) {
+                & {
+                    bottom: 0;
+                }
+            }
+            
+            li {
+                width: 10px;
+                height: 10px;
+                border: 1px solid $border;
+                border-radius: 100%;
+                background-color: $white;
+                float: left;
+                margin-right: 8px;
+            }
+            
+            .active {
+                background-color: $green;
+            }
+            
+            &:after {
+                @include clear-a;
+            }
+        }
+        
+        .item {
+            @include between;
+            
+            
+            > div {
+                width: 17%;
+                text-align: center;
+                padding: 5% 3%;
+                background-color: $white;
+                
+                @media screen and (max-width: 810px) {
+                    & {
+                        width: 100%;
+                        padding: 5% 0;
+                    }
+                }
+                
+                img {
+                    width: 108px;
+                    height: 108px;
+                }
+                
+                h4 {
+                    margin: 20px 0;
+                }
+                
+                p {
+                    font-size: 1rem;
+                    color: $font;
+                    text-align: left;
+                    line-height: 1.7rem;
+                    
+                    @media screen and (max-width: 810px) {
+                        & {
+                            padding: 0 7%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .line4 {
+        
+        h4 {
+            margin-bottom: 3%;
+            font-size: 1.2rem;
+            text-align: center;
+            
+        }
+        
+        ul {
+            width: 100%;
+            background-color: $white;
+            text-align: justify;
+            @include li-between;
+            
+            li {
+                vertical-align: middle;
+                padding: 4% 0;
+                text-align: center;
+                margin: 0;
+                
+                &:hover {
+                    -webkit-box-shadow: 0 0 30px $border;
+                    box-shadow: 0 0 30px $border;
+                    z-index: 3;
+                }
+                
+                @media screen and (max-width: 810px) {
+                    & {
+                        width: 100%;
+                    }
+                }
+                
+                img {
+                    vertical-align: middle;
+                }
+                
+            }
+                
+        }
+    }
+    
+}
+
+.main-link {
+    width: 100%;
+    background-color: $white;
+    text-align: center;
+        
+    h4 {
+        margin: 1% 0;
+    }
+        
+    ul {
+        width: 70% !important;
+        margin: 1% auto;
+        padding-left: 3%;
+        color: $font;
+        overflow-x: hidden;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        justify-content: space-between;
+        
+        
+        @media screen and (max-width: 1200px) {
+            & {
+                width: 100% !important;
+                padding-left: 1.5%;
+            }
+        }
+        
+        @media screen and (max-width: 700px) {
+            & {
+                display: block;
+                padding-left: 1.3%;
+            }
+        }
+            
+        li {
+            float: left;
+            
+            font-size: 0.9rem;
+            width: 60px !important;
+            padding-left: 10px;
+            margin-top: 0;
+            margin-bottom: 0;
+            
+            border-bottom: 1px solid transparent;
+            background-image: url('../img/未标题-1.png');
+            @include bg-img(
+                    $bg-s-x: 5px,
+                    $bg-s-y: 5px,
+                    $bg-p: left)
+            
+            &:hover {
+                    border-bottom: 1px solid $font;
+                }
+            
+            @media screen and (max-width: 810px) {
+                & {
+                    margin-bottom: 1%;
+                }
+            }
+            
+            a {
+                color: $font;
+            }
+        }
+            
+        &:after {
+            @include clear-a;
+        }
+    }
+}

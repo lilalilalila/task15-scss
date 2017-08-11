@@ -1,0 +1,156 @@
+.footer {
+    width: 100%;
+    color: $white;
+    background-color: $green;
+    padding: 15px 0;
+    
+    > div {
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+        height: 10rem;
+        
+        @media screen and (max-width: 1200px) {
+            & {
+                width: 98%;
+            }
+        }
+        
+        > div {
+            margin-top: 2.2%;
+        }
+        
+        .footer-left {
+            width: 212px;
+            text-align: left;
+            font-size: 1rem;
+            display: inline-block;
+            vertical-align: middle;
+            float: left;
+            
+            p {
+                margin-bottom: 31%;
+                font-size: 1.2rem;
+            }
+            
+            span {
+                font-size: 1rem;
+                width: 15px;
+                a {
+                    color: #FFFFFF;
+                }
+            }
+            
+            .footer-border {
+                padding: 0 8px;
+                margin: 0 8px;
+                border-left: 1px solid $white;
+                border-right: 1px solid $white;
+            }
+            
+            @media screen and (max-width: 412px) {
+                & {
+                    
+                    p {
+                        font-size: 1rem;
+                        margin-bottom: 8%;
+                    }
+                    
+                    span {
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+        }
+        
+        .footer-center {
+            width: 174px;
+            margin-left: 5%;
+            font-size: 1rem;
+            display: inline-block;
+            vertical-align: middle;
+            float: left;
+            
+            p {
+                font-size: 1.2rem;
+            }
+            
+            ul {
+                width: 100%;
+                margin-top: -2%;
+                
+                li {
+                    float: left;
+                    margin-right: 10px;
+                    margin-top: 13%;
+                    
+                    a {
+                        font-size: 0.9rem;
+                        color: $white;
+                        
+                        &:hover {
+                            border-bottom: 2px solid $white;
+                        }
+                    }
+                }
+                
+                &:after {
+                    @include clear-a;
+                }
+            }
+            
+            @media screen and (max-width: 412px) {
+                & {
+                    margin: 10px 0;
+                    
+                    
+                    p {
+                        font-size: 1rem;
+                    }
+                    
+                    a {
+                        font-size: 0.8rem !important;
+                    }
+                }
+            }
+        }
+        
+        .footer-right {
+            width: 93px;
+            font-size: 1rem;
+            float: right;
+            display: inline-block;
+            vertical-align: middle;
+            text-align: center;
+            
+            @media screen and (max-width: 600px) {
+                & {
+                    float: left;
+                }
+            }
+            
+            img {
+                width: 93px;
+                height: 93px;
+                margin-bottom: -5px;
+            }
+        }
+    }
+    
+    &:after {
+        @include clear-a;
+    }
+}
+
+.footer-bottom {
+            width: 100%;
+            padding: 6px 0;
+            text-align: center;
+            border-top: 1px solid #32c086;
+            color: $white;
+            background-color: $green;
+            
+            p {
+                font-size: 0.7rem;
+            }
+        }

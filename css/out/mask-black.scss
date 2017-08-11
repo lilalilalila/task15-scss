@@ -1,0 +1,15 @@
+//黑色蒙版
+@mixin mask($mask-name,$mask-color,$mask-opacity) {
+    #{$mask-name}:before {
+        content: '';
+        display: block;
+        width: 1000px;
+        height: 1000px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 5;
+        opacity: $mask-opacity;
+        background-color: $mask-color;
+    }
+}

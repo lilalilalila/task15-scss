@@ -1,0 +1,6 @@
+//背景图片
+@mixin bg-img($bg-s-x,$bg-s-y,$bg-p) {
+    background-repeat: no-repeat;
+    background-size: $bg-s-x $bg-s-y;
+    background-position: $bg-p center;
+}

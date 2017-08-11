@@ -1,0 +1,8 @@
+
+//外边距
+@mixin margin($t,$r,$b,$l) {
+    margin-top: $t;
+    margin-right: $r;
+    margin-bottom: $b;
+    margin-left: $l; 
+}
